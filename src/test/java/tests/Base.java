@@ -18,6 +18,7 @@ import org.testng.annotations.Parameters;
 import utils.CommonOperations;
 import utils.ConfigFileReader;
 import utils.ExcelReader;
+import utils.listners.ExtentTestNGReportBuilder;
 
 import java.io.File;
 import java.text.DateFormat;
@@ -30,7 +31,7 @@ import java.util.concurrent.TimeUnit;
  * Created by Devdun.k
  */
 
-public class Base {
+public class Base extends ExtentTestNGReportBuilder {
     public WebDriver driver;
     public ExcelReader excel;
     Date date = Calendar.getInstance().getTime();

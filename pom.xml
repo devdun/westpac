@@ -17,6 +17,7 @@
         <apachePOI>4.0.0</apachePOI>
         <poiOOXml>4.0.0</poiOOXml>
         <commons-io>2.6</commons-io>
+        <extentReports>4.0.9</extentReports>
     </properties>
 
     <dependencies>
@@ -62,6 +63,13 @@
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>${commons-io}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>${extentReports}</version>
         </dependency>
 
     </dependencies>
