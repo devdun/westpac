@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="false" thread-count="6" verbose="1">
+    <!--Values Chrome Firefox HLChrome HLFirefox HTMLUnit phantomJS-->
+    <parameter name="browser" value="Chrome"/>
+
+    <!--Values AdminURL StatementURL PatientURL-->
+    <parameter name="URL" value="Live"/>
+
+    <!--Values QA Dev Uat Prod -->
+    <parameter name="Env" value="QA"/>
+
+    <test name="Video is playing properly">
+        <parameter name="URL" value="https://buggy.justtestit.org/"/>
+        <classes>
+            <class name="tests.login.LoginTest"/>
+        </classes>
+    </test>
+
+</suite>
