@@ -2,7 +2,6 @@ package tests.login;
 
 import buggy_just_testit_pagefactory.LoginOptions;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;

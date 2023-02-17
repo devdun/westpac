@@ -28,6 +28,9 @@ public class LoginOptions {
     @FindBy(xpath = LoginOptionsXpathContent.LINK_TEXT_USERNAME)
     WebElement userName;
 
+    @FindBy(xpath = LoginOptionsXpathContent.LOGIN_INVALID_VALIDATION_MSG)
+    WebElement loginInvalidValidationMsg;
+
     @FindBy(linkText = LoginOptionsXpathContent.LINK_REGISTER_BTN)
     WebElement registerLink;
 
@@ -53,8 +56,28 @@ public class LoginOptions {
         return loginTextField.getAttribute("value");
     }
 
+    public boolean emptyLoginValidationMsgAppear(){
+        return driver.findElements(By.name(LoginOptionsXpathContent.LOGIN_INPUT_FIELD)).size()>0;
+    }
+
+    public String emptyLoginValidationMsg(){
+        return loginTextField.getAttribute("validationMessage");
+    }
+
+    public boolean emptyPwdValidationMsgAppear(){
+        return driver.findElements(By.name(LoginOptionsXpathContent.PASSWORD_INPUT_FIELD)).size()>0;
+    }
+
+    public String emptyPwdValidationMsg(){
+        return passwordTextField.getAttribute("validationMessage");
+    }
+
     public String typedPwd(){
         return passwordTextField.getAttribute("value");
+    }
+
+    public String validationMsg(){
+        return loginInvalidValidationMsg.getText();
     }
 
     public boolean userName(String loginText){

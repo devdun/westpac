@@ -8,4 +8,5 @@ public class LoginOptionsXpathContent {
     public static final String LINK_TEXT_PROFILE = "Profile";
     public static final String LINK_TEXT_LOGOUT = "Logout";
     public static final String LINK_TEXT_USERNAME = "//span[@class='nav-link disabled']";
+    public static final String LOGIN_INVALID_VALIDATION_MSG = "//span[@class='label label-warning']";
 }

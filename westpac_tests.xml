@@ -7,13 +7,19 @@
     <!--Values AdminURL StatementURL PatientURL-->
     <parameter name="URL" value="Live"/>
 
+    <parameter name="URL" value="https://buggy.justtestit.org/"/>
+
     <!--Values QA Dev Uat Prod -->
     <parameter name="Env" value="QA"/>
 
-    <test name="Video is playing properly">
-        <parameter name="URL" value="https://buggy.justtestit.org/"/>
+    <test name="Valid Login">
         <classes>
             <class name="tests.login.LoginTest"/>
+        </classes>
+    </test>
+    <test name="Invalid Login">
+        <classes>
+            <class name="tests.login.InvalidLoginTests"/>
         </classes>
     </test>
 
