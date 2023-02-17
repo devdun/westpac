@@ -22,5 +22,10 @@
             <class name="tests.login.InvalidLoginTests"/>
         </classes>
     </test>
+    <test name="Log out verification">
+        <classes>
+            <class name="tests.login.LoginLogOutTest"/>
+        </classes>
+    </test>
 
 </suite>

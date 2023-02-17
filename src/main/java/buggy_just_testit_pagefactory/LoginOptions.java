@@ -93,6 +93,10 @@ public class LoginOptions {
         return driver.findElements(By.linkText(LoginOptionsXpathContent.LINK_TEXT_PROFILE)).size()>0;
     }
 
+    public void clickLogOut(){
+        logoutLink.click();
+    }
+
     public void setLoginAndPwd(String setLoginField,String setPwdField){
         this.setLoginField(setLoginField);
         this.setPwdField(setPwdField);
