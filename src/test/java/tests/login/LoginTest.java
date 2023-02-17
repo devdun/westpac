@@ -1,9 +1,8 @@
 package tests.login;
 
-import buggy_just_testit_pagefactory.LandingPage;
+import buggy_just_testit_pagefactory.LoginOptions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -23,26 +22,24 @@ public class LoginTest extends Base {
         loginText = "Login34!@#$%^&*(),=";
         pwdText = "Pwd!@#$%^&*()_+=-<>?,./";
         SoftAssert softAssert = new SoftAssert();
-        LandingPage landingPage = PageFactory.initElements(driver,LandingPage.class);
-        landingPage.setLoginAndPwd(loginText,pwdText);
-        String typedLogin = landingPage.typedLogin();
-        String typedPwd = landingPage.typedPwd();
+        LoginOptions loginOptions = PageFactory.initElements(driver, LoginOptions.class);
+        loginOptions.setLoginAndPwd(loginText,pwdText);
+        String typedLogin = loginOptions.typedLogin();
+        String typedPwd = loginOptions.typedPwd();
         softAssert.assertEquals(typedLogin,loginText);
         softAssert.assertEquals(typedPwd,pwdText);
         softAssert.assertAll();
     }
 
     @Test(dependsOnMethods = {"verifyInputFields" },dataProvider = "Login", priority = 2)
-    public void verifyValidLogin(String login, String pwd, String type){
+    public void verifyValidLogin(String login, String pwd, String fName, String type){
         loginText = login;
         pwdText = pwd;
         SoftAssert softAssert = new SoftAssert();
-        LandingPage landingPage = PageFactory.initElements(driver,LandingPage.class);
-        landingPage.setLoginAndPwd(loginText,pwdText);
-        String typedLogin = landingPage.typedLogin();
-        String typedPwd = landingPage.typedPwd();
-        softAssert.assertEquals(typedLogin,loginText);
-        softAssert.assertEquals(typedPwd,pwdText);
+        LoginOptions loginOptions = PageFactory.initElements(driver, LoginOptions.class);
+        loginOptions.setLoginAndPwdAndClickLogin(loginText,pwdText);
+        softAssert.assertTrue(loginOptions.profileLinkAppear());
+        softAssert.assertTrue(loginOptions.userName(fName),"User name not display in the header");
         softAssert.assertAll();
     }
 
