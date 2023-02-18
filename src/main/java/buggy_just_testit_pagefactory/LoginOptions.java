@@ -89,6 +89,10 @@ public class LoginOptions {
         loginBtn.click();
     }
 
+    public void clickRegisterBtn(){
+        registerLink.click();
+    }
+
     public boolean profileLinkAppear(){
         return driver.findElements(By.linkText(LoginOptionsXpathContent.LINK_TEXT_PROFILE)).size()>0;
     }
