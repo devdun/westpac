@@ -1,5 +1,6 @@
 package buggy_just_testit_pagefactory;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -35,6 +36,12 @@ public class RegistrationPage {
 
     @FindBy(xpath = RegistrationPageXpathContent.CANCEL_BTN)
     WebElement cancelBtn;
+
+    @FindBy(xpath = RegistrationPageXpathContent.SUCCESS_MSG)
+    WebElement successMsg;
+
+    @FindBy(xpath = RegistrationPageXpathContent.ERROR_MSG)
+    WebElement errorMsg;
 
     public void setLoginField(String setLoginField){
         commonOperations.waitForElementToBeClickable(driver,loginTextField,10);
@@ -84,6 +91,22 @@ public class RegistrationPage {
 
     public void clickRegisterBtn(){
         registerBtn.click();
+    }
+
+    public boolean successMsgVisible(){
+        return driver.findElements(By.xpath(RegistrationPageXpathContent.SUCCESS_MSG)).size()>0;
+    }
+
+    public String getSuccessMsg(){
+        return successMsg.getText();
+    }
+
+    public boolean errorMsgVisible(){
+        return driver.findElements(By.xpath(RegistrationPageXpathContent.ERROR_MSG)).size()>0;
+    }
+
+    public String getErrorMsg(){
+        return errorMsg.getText();
     }
 
     public void fillRegistrationForm(String setLoginField,String setFName,String setLName,String setPwd,String setConfirmPwd){

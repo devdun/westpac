@@ -27,5 +27,10 @@
             <class name="tests.login.LoginLogOutTest"/>
         </classes>
     </test>
+    <test name="Registration Form Testing">
+        <classes>
+            <class name="tests.registration.RegisterNewUser"/>
+        </classes>
+    </test>
 
 </suite>

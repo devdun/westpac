@@ -8,4 +8,6 @@ public class RegistrationPageXpathContent {
     public static final String CONFIRM_PWD_INPUT_FIELD = "confirmPassword";
     public static final String REGISTER_BTN = "//button[@type='submit'][not(@disabled)][contains(text(),'Register')]";
     public static final String CANCEL_BTN = "//a[@role='button'][contains(text(),'Cancel')]";
+    public static final String SUCCESS_MSG = "//div[@class='result alert alert-success']";
+    public static final String ERROR_MSG = "//div[@class='result alert alert-danger']";
 }
