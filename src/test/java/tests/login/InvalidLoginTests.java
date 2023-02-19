@@ -18,7 +18,7 @@ public class InvalidLoginTests extends Base {
     }
 
     @Test(dataProvider = "InvalidLogin", priority = 1)
-    public void verifyValidLogin(String login, String pwd, String type){
+    public void verifyInValidLogin(String login, String pwd, String type){
         loginText = login;
         pwdText = pwd;
         SoftAssert softAssert = new SoftAssert();
