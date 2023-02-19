@@ -125,7 +125,7 @@ public class Base extends ExtentTestNGReportBuilder {
 
     @AfterClass
     public void endReport() {
-//        driver.quit();
+        driver.quit();
     }
 
     public static void takeSnapShot(WebDriver webdriver, String fileWithPath) throws Exception {
