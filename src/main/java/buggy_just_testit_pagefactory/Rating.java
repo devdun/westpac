@@ -65,7 +65,7 @@ public class Rating {
     }
 
     public String getFirstComment(){
-        commonOperations.waitUntilElementVisible(driver,firstCommentInList,10);
+        commonOperations.waitUntilElementVisible(driver,firstCommentInList,20);
         return firstCommentInList.getText();
     }
 
