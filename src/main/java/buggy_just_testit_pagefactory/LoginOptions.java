@@ -84,6 +84,7 @@ public class LoginOptions {
     }
 
     public boolean userName(String loginText){
+        commonOperations.waitUntilElementVisible(driver,userName,10);
         String name=  userName.getText();
         return name.contains(loginText);
     }
@@ -102,6 +103,10 @@ public class LoginOptions {
 
     public boolean profileLinkAppear(){
         return driver.findElements(By.linkText(LoginOptionsXpathContent.LINK_TEXT_PROFILE)).size()>0;
+    }
+
+    public void clickProfileLink(){
+        profileLink.click();
     }
 
     public void clickLogOut(){

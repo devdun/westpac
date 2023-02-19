@@ -37,5 +37,10 @@
             <class name="tests.rating.VoteTest"/>
         </classes>
     </test>
+    <test name="Update Pwd Test">
+        <classes>
+            <class name="tests.profile.UpdatePassword"/>
+        </classes>
+    </test>
 
 </suite>
