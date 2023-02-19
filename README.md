@@ -9,7 +9,7 @@
 
 ### **How to implement**
 
-- git clone https://github.com/devdun/DtTesting.git
+- git clone https://github.com/devdun/westpac.git
 
 - Open IntelliJ idea
 
