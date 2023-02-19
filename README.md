@@ -126,6 +126,6 @@ Registration
 
 
 
-#### Bugs
+#### Test Approach & Bug Documents
 
-Please refer [documented_bugs](https://github.com/devdun/westpac/tree/master/documented_bugs) Folder
+Please refer [Test_Approach_AND_documented_bug](https://github.com/devdun/westpac/tree/master/Test_Approach_AND_documented_bugs) Folder
