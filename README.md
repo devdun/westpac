@@ -93,7 +93,7 @@ westpac_tests.xml replace browser value
 
 #### **Reports**
 
-Extent Reports is an HTML-based reporting library that enables automation test engineers to create beautiful, interactive, and detailed reports. The Extent Reports library uses a combination of HTML, CSS, and JavaScript to create powerful and attractive reports. The library is designed to be used with the most popular test automation frameworks such as Selenium, Appium, and others. The library also offers a powerful report viewer which allows users to view their reports in various formats such as HTML, XML, and PDF. Extent Reports also offers a powerful API that enables users to create custom reports. This makes it an ideal reporting tool for both amateur and professional testers.
+The Extent Reports library uses a combination of HTML, CSS, and JavaScript to create detailed and attractive reports. The library is designed to be used with the most popular test automation frameworks such as Selenium, Appium, and others. The library also offers a powerful report viewer which allows users to view their reports in various formats such as HTML, XML, and PDF. Extent Reports also offers a powerful API that enables users to create custom reports. This makes it an ideal reporting tool for both amateur and professional testers.
 
 Once after completed the test execution, you can find the test report under *rootfolder/test-output/MyReports/dd_mm_yyyy/westpac_Report_timestamp.html* choose the correct folder and html report
 
