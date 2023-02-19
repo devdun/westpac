@@ -12,10 +12,18 @@
 
   or else configure your version in POM file
 
+  eg:-
+  
   ```
   <maven.compiler.source>15</maven.compiler.source>
   <maven.compiler.target>15</maven.compiler.target>
   ```
+
+
+```
+<maven.compiler.source>1.8</maven.compiler.source>
+<maven.compiler.target>1.8</maven.compiler.target>
+```
 
 ### **How to implement**
 
