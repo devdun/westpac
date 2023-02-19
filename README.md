@@ -118,3 +118,14 @@ Rating
 - Vote test
 
 Registration
+
+- Verify input fields
+- Register new user and login
+- Existing user name validation
+- Invalid password validations
+
+
+
+#### Bugs
+
+Please refer [documented_bugs](https://github.com/devdun/westpac/tree/master/documented_bugs) Folder
