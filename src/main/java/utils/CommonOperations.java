@@ -1,6 +1,7 @@
 package utils;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -52,7 +53,7 @@ public class CommonOperations {
     public void waitUntilPageLoaded(WebDriver driver) {
         while(this.isPageLoading(driver)) {
             try {
-                Thread.sleep((long)this.sleepTime);
+                Thread.sleep(this.sleepTime);
             } catch (InterruptedException var3) {
                 Thread.currentThread().interrupt();
             }
@@ -87,6 +88,19 @@ public class CommonOperations {
         }
 
         return false;
+    }
+
+    public WebElement waitUntilElementVisible(WebDriver driver, WebElement element, int delay) {
+        try{
+            WebDriverWait wait = new WebDriverWait(driver, delay);
+            return wait.until(ExpectedConditions.visibilityOf(element));
+        }catch (NoSuchElementException e){
+            throw new RuntimeException("Web element not visible within given time" + element +" Time "+ delay);
+        }
+    }
+
+    public void waitUntilElementVisible(WebDriver driver, WebElement element) {
+        this.waitUntilElementVisible(driver,element,20);
     }
 
     public int randomInt(int min, int max) {

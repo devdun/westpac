@@ -32,5 +32,10 @@
             <class name="tests.registration.RegisterNewUser"/>
         </classes>
     </test>
+    <test name="Vote Rating and Verification">
+        <classes>
+            <class name="tests.rating.VoteTest"/>
+        </classes>
+    </test>
 
 </suite>

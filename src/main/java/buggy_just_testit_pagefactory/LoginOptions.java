@@ -34,6 +34,9 @@ public class LoginOptions {
     @FindBy(linkText = LoginOptionsXpathContent.LINK_REGISTER_BTN)
     WebElement registerLink;
 
+    @FindBy(linkText = LoginOptionsXpathContent.LINK_BUGGY_RATING_BTN)
+    WebElement buggyRatingLink;
+
     @FindBy(linkText = LoginOptionsXpathContent.LINK_TEXT_PROFILE)
     WebElement profileLink;
 
@@ -91,6 +94,10 @@ public class LoginOptions {
 
     public void clickRegisterBtn(){
         registerLink.click();
+    }
+
+    public void clickBuggyRatingBtn(){
+        buggyRatingLink.click();
     }
 
     public boolean profileLinkAppear(){
