@@ -21,10 +21,6 @@
 
   ![img](https://github.com/devdun/westpac/blob/master/img/TrustProject.png)
 
-- The project structure looks like the below image
-
-  ![img](https://github.com/devdun/westpac/blob/master/img/Project.png)
-
 ### How to Run
 
 #### Option 1
