@@ -1,19 +1,31 @@
 # **Westpac - ReadMe**
 
-
-
-### **How to implement**
-
-
-
-### How to Run
-
-#### Prerequisites
+### Prerequisites
 
 - Git
 - IntelliJ idea
 - Maven
 - JDK
+
+### **How to implement**
+
+- git clone https://github.com/devdun/DtTesting.git
+
+- Open IntelliJ idea
+
+- Open project
+
+  ![img](https://github.com/devdun/westpac/blob/master/img/fileopen.png)
+
+- There will be a popup. Select **Trust Project**
+
+  ![img](https://github.com/devdun/westpac/blob/master/img/TrustProject.png)
+
+- The project structure looks like the below image
+
+  ![img](https://github.com/devdun/westpac/blob/master/img/Project.png)
+
+### How to Run
 
 #### Option 1
 
@@ -55,6 +67,21 @@ The code snippet is a configuration for the Maven Surefire Plugin. This plugin i
 - Open Project using IntelliJ idea
 - Navigate to westpac_tests.xml
 - Run XML file
+
+#### Run using different browsers or using headless mode
+
+```
+<!--Values Chrome Firefox HLChrome HLFirefox HTMLUnit phantomJS-->
+<parameter name="browser" value="Chrome"/>
+```
+
+westpac_tests.xml replace browser value 
+
+- value="Chrome" - *Chrome browser*
+- value="HLChrome" - *Headless chrome*
+- value="Firefox"  - *Firefox*
+
+
 
 **Test Data**
 
